@@ -1,5 +1,5 @@
 [project]
-name = "python-package-qtemplate-derived-test"
+name = "python-package-template-derived-test"
 version = "0.1.0"
 description = "Python package"
 authors = [{name = "Quinten Roets", email = "qdr2104@columbia.edu"}]
@@ -7,22 +7,25 @@ license = {text = "MIT"}
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
+    "typer>=0.9"
 ]
 
 [project.optional-dependencies]
 dev = [
     "build",
     "bump2version",
+    "coverage",
     "hypothesis",
     "pre-commit",
     "pytest",
+    "pytest-mypy-plugins",
 ]
 
 [project.urls]
 "Source Code" = "https://github.com/quintenroets/python-package-template-derived-test"
 
 [project.scripts]
-python_package_template_derived_test = "python_package_template_derived_test.cli:main"
+python_package_template_derived_test = "python_package_template_derived_test.cli:entry_point"
 
 [build-system]
 requires = ["setuptools"]
